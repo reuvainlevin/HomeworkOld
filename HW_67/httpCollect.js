@@ -10,7 +10,7 @@ const getHttp = require('http'),
         console.log(data.length);
         console.log(data);
     });
-});just added*/
+});*/
 
 
 var lineCount = 0,
