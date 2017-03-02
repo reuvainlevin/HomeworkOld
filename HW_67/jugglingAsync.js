@@ -6,7 +6,6 @@ var fullString = [],
 
 
 function getOne() {
-    //nothing new
     getHttp.get(process.argv[2], response => {
         response.setEncoding('utf8');
 
