@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    html, body {
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        background-color: blue;
+    }
+
+    #info {
+        border: 2px solid gray;
+        text-align: center;
+        height: 330px;
+        width: 20%;
+        float: left;
+    }
+
+    #newGame {
+        height: 45px;
+    }
+
+    #score, #highScore, #pauseWrap {
+        height: 20px;
+    }
+
+    #newGame, #score, #highScore, #pauseWrap{
+        background-color: grey;
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    #theCanvas {    
+        background-color: white;
+    }
+    </style>
+<!--link href="/jquery-ui/jquery-ui.min.css" rel="stylesheet"-->
+</head>
+
+<body>
+    <div id="info">
+        <button id="newGame">New Game</button>
+        <div id="pauseWrap">
+        </div>
+        <p>Your score:</p>
+        <p id="score"></p>
+        <p>High score:</p>
+        <p id="highScore"></p>
+        <p id="gameOver"></p>
+    </div>
+    <canvas id="theCanvas" width="900" height="500"></canvas>
+
+    <audio id="ding" src="ding.wav"></audio>
+    <script src="/jquery.min.js"></script>
+    <script src="snake2.js"></script>
+</body>
+
+</html>
