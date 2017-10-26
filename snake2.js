@@ -6,9 +6,9 @@
         newGame = $("#newGame"),
         pauseWrap = $("#pauseWrap"),
         score = $("#score"),
-        //highScore = $("#highScore"),
+        highScore = $("#highScore"),
         gameOver = $("#gameOver"),
-        //lsHighScore = localStorage.highScore,
+        lsHighScore = localStorage.highScore,
         pause,
         ctx = canvas.getContext('2d'),
         face = new Image(),
@@ -78,7 +78,7 @@
 
     function setDefaults() {
         clearInterval(interval);
-        //highScore.text(localStorage.highScore);
+        highScore.text(localStorage.highScore);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         currantScore = 0;
         score.text("0");
@@ -91,11 +91,11 @@
     function endGame() {
         clearInterval(interval);
         ding();
-        gameOver.html("<h2>GAME OVER</h2>");
+        gameOver.html("GAME OVER");
         pauseWrap.html('');
-        /*if (currantScore > localStorage.highScore) {
+        if (currantScore > localStorage.highScore) {
             localStorage.highScore = currantScore;
-        }*/
+        }
     }
 
     function setScore(amount) {
@@ -172,7 +172,7 @@
                     placeBonus();
                     getBonusTime();
                     isBonus = true;
-                    gameOver.html("<h2>GET THE BONUS</h2>");
+                    gameOver.html("GET THE BONUS");
                 }
             }
 
@@ -280,4 +280,4 @@
         }
     });
 
-} ());
+}());
